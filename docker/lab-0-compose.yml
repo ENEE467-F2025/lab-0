@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  lab-0-docker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: lab-0-container
+    environment:
+      - DISPLAY=$DISPLAY
+      - QT_X11_NO_MITSHM=1
+    image: lab-0-image:latest
+    # Required for communicating over the network
+    network_mode: "host"
+    ipc: "host"
+    pid: "host"
+    # Required for accessing hardware
+    privileged: true
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../:/home/robot/lab-0
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw

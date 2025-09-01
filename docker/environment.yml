@@ -1,0 +1,11 @@
+name: lab-0
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip:
+    - ipython
+    - numpy
+    - scipy
+    - matplotlib
+prefix: /opt/conda/envs/lab-0
