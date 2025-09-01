@@ -44,16 +44,26 @@ def simulate_pendulum_odeint():
 
     X = odeint(x_dot, x_0, T)
 
-    plt.plot(T, X[:, 0])
-    plt.plot(T, X[:, 1])
-    plt.show()
+    plt.plot(T, X[:, 0], label=r"$\theta$ (rad)")
+    plt.plot(T, X[:, 1], label=r"$\dot{\theta}$ (rad/s)")
+    plt.title("Simulation with ODEINT")
+    plt.xlabel("time (s)")
+    plt.ylabel("trajectory")
+    plt.legend()
+    plt.savefig("pendulum_with_odeint.png")
+    plt.clf()
 
 def main():
     import numpy as np
     T, X_1, X_2 = simulate_pendulum(x_0=[1., 0.], L=1., N=500, dt=0.01)
-    plt.plot(T, X_1)
-    plt.plot(T, X_2)
-    plt.show()
+    plt.plot(T, X_1, label=r"$\theta$ (rad)")
+    plt.plot(T, X_2, label=r"$\dot{\theta}$ (rad/s)")
+    plt.title("Simulation with Euler")
+    plt.xlabel("time (s)")
+    plt.ylabel("trajectory")
+    plt.legend()
+    plt.savefig("pendulum_with_euler.png")
+    plt.clf()
 
 if __name__ == "__main__":
     main()

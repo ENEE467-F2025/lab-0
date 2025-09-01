@@ -22,7 +22,7 @@ The lab computers contain a prebuild image so you will not have to build the ima
     ```
     (lab-0) robot@docker-desktop:~$
     ```
-indicating that the container is running
+    indicating that the container is running
 * Edit the lab-0 code `matrix.py` and `pendulum.py` from a VS Code editor on the host machine. This `lab-0` directory is mounted to the docker container so all changes will be reflected inside the container.
 * To execute the Python script, use the following command
     ```

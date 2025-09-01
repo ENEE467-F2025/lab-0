@@ -67,6 +67,8 @@ doc/html/
 # MacOS files
 .DS_Store
 
+# plot images
+*.png
 
 # USD files allowed in the repo [for now]
 # **/*.usd
