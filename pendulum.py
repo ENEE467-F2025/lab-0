@@ -51,6 +51,7 @@ def simulate_pendulum_odeint():
     plt.ylabel("trajectory")
     plt.legend()
     plt.savefig("pendulum_with_odeint.png")
+    plt.show()
     plt.clf()
 
 def main():
@@ -63,6 +64,7 @@ def main():
     plt.ylabel("trajectory")
     plt.legend()
     plt.savefig("pendulum_with_euler.png")
+    plt.show()
     plt.clf()
 
 if __name__ == "__main__":

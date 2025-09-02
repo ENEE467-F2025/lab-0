@@ -38,6 +38,20 @@ class Matrix:
         
         return X
     
+    @property
+    def T(self):
+        # return self transposed
+
+        # create a new, empty matrix with shape = (self.shape[1], self.shape[0])
+        data = [[0 for _ in range(self.shape[0])] for __ in range(self.shape[1])]
+        X = Matrix(data)
+
+        for i in range(self.shape[0]):
+            for j in range(self.shape[1]):
+                X[j, i] = self[i, j]
+        
+        return X
+    
     def __sub__(self, B):
         # implement the code to calculate X = self - B
         return
@@ -70,11 +84,36 @@ class Matrix:
         for row in self.data:
             s+=str(row)+"\n"
         return s
-
+    
 #
 
+def test_matrix_class():
+
+    A = Matrix([
+        [1., 2., 3.],
+        [4., 5., 6.]
+    ])
+    B = Matrix([
+        [3., -2.],
+        [1., 2.],
+        [-1., 5.]
+    ])
+
+    print(A)
+    print(B)
+    print(A.shape)
+    print(B.shape)
+    print(A.T)
+    print(B.T)
+
+    print( A * B )
+    print( A + B.T)
+    print(B.T * A.T)
+
+
+
 def main():
-    pass
+    test_matrix_class()
 
 if __name__ == "__main__":
     main()
