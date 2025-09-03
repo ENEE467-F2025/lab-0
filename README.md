@@ -5,7 +5,7 @@ This repository contains a Docker container for the first lab as well as the nec
 
 ## Overview
 
-Being well versed in Linux-based operating systems and Python programming is crucial for working in the field of robotics. A majority of the open-source robotics community relies on [Robot Operating System](https://www.ros.org/)( ROS) for the execution, development, and distribution of their projects. ROS runs natively on [Ubuntu](https://ubuntu.com/), and heavy emphasis is placed on working with ROS in later labs. Additionally, many open-source robotics tools are packaged with a Python API, allowing for general and accessible use. Therefore this lab is designed to give you the necessary knowledge required to comfortably work with Python and Linux-based operating systems.
+Being well versed in Linux-based operating systems and Python programming is crucial for working in the field of robotics. A majority of the open-source robotics community relies on [Robot Operating System](https://www.ros.org/) (ROS) for the execution, development, and distribution of their projects. ROS runs natively on [Ubuntu](https://ubuntu.com/), and heavy emphasis is placed on working with ROS in later labs. Additionally, many open-source robotics tools are packaged with a Python API, allowing for general and accessible use. Therefore this lab is designed to give you the necessary knowledge required to comfortably work with Python and Linux-based operating systems.
 
 To avoid software conflicts and increase portability, all lab software will be packaged as a Docker container. Follow the instructions below to get started.
 
