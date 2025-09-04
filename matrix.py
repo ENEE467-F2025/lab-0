@@ -53,10 +53,14 @@ class Matrix:
         return X
     
     def __sub__(self, B):
+        # TODO: Complete this method
+
         # implement the code to calculate X = self - B
         return
     
     def __mul__(self, B):
+        # TODO: Complete this method
+
         # implement the code to calculate X = self * B
 
         if isinstance(B, Matrix):
@@ -68,6 +72,8 @@ class Matrix:
             return
     
     def __rmul__(self, B):
+        # TODO: Complete this method
+
         # implement the code to calculate X = B * self
 
         if isinstance(B, Matrix):

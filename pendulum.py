@@ -17,6 +17,8 @@ def simulate_pendulum(x_0, L, N, dt):
     return T, X_1, X_2
 
 def simulate_pendulum_with_friction(x_0, L, q, N, dt):
+    # TODO: Complete this method
+    
     return
 
 def simulate_pendulum_odeint():
