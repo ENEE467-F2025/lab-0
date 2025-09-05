@@ -26,7 +26,7 @@ To build the Docker container, ensure that you have [Docker](https://www.docker.
     ```
 * Build the image with Docker compose
     ```
-    docker compose -f lab-0-compose.yml build
+    userid=$(id -u) groupid=$(id -g) docker compose -f lab-0-compose.yml build
     ```
 
 ## Starting the Container
