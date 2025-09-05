@@ -15,7 +15,7 @@ The lab computers contain a prebuild image so you will not have to build the ima
 * Clone this repo to get the lab-0 code
     ```
     cd
-    git clone git@github.com:ENEE467-F2025/lab-0.git
+    git clone https://github.com/ENEE467-F2025/lab-0.git
     cd lab-0/docker
     ```
 * Run the Docker container
