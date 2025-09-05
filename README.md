@@ -9,12 +9,30 @@ Being well versed in Linux-based operating systems and Python programming is cru
 
 To avoid software conflicts and increase portability, all lab software will be packaged as a Docker container. Follow the instructions below to get started.
 
+## Building the Container
+
+First check to see if the image is prebuilt on the lab computer by running the following command
+```
+docker image ls
+```
+If you see the image named `lab-0-image` in the list then you can skip the build process.
+
+To build the Docker container, ensure that you have [Docker](https://www.docker.com/get-started/) installed and the Docker daemon running.
+* Clone this repository and navigate to the `docker` folder
+    ```
+    git clone https://github.com/ENEE467-F2025/lab-0.git
+    cd lab-0/docker
+    ```
+* Build the image with Docker compose
+    ```
+    docker compose -f lab-0-compose.yml build
+    ```
+
 ## Starting the Container
 
 The lab computers contain a prebuild image so you will not have to build the image.
 * Clone this repo to get the lab-0 code
     ```
-    cd
     git clone https://github.com/ENEE467-F2025/lab-0.git
     cd lab-0/docker
     ```
@@ -26,26 +44,13 @@ The lab computers contain a prebuild image so you will not have to build the ima
     ```
     (lab-0) robot@docker-desktop:~$
     ```
-* Edit the lab-0 code `matrix.py` and `pendulum.py` from a VS Code editor on the host machine. This `lab-0` directory is mounted to the docker container so all changes will be reflected inside the container.
+* Edit the lab-0 code `matrix.py` and `pendulum.py` from a VS Code editor on the host machine. The repo directory `lab-0/src`  is mounted to the docker container located at `/home/robot/lab-0/src` so all changes will be reflected inside the container.
 * To execute the Python script, use the following command
     ```
-    cd ~/lab-0
+    cd ~/lab-0/src
     python pendulum.py
     ```
 
 ## Lab Instructions
 
 Please follow the [lab manual](Lab_0_Python_and_Linux.pdf) closely. All instructions are contained inside the lab manual.
-
-## Building the Container
-
-To build the Docker container on your own system, ensure that you have [Docker](https://www.docker.com/get-started/) installed and the Docker daemon running.
-* Clone this repository and navigate to the `docker` folder
-    ```
-    git clone git@github.com:ENEE467-F2025/lab-0.git
-    cd lab-0/docker
-    ```
-* Build the image with Docker compose
-    ```
-    docker compose -f lab-0-compose.yml build
-    ```

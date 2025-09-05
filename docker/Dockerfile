@@ -54,6 +54,6 @@ RUN conda env create -f /tmp/environment.yml
 RUN echo "source activate lab-0" >> ~/.bashrc
 ENV PATH /opt/conda/envs/lab-0/bin:$PATH
 
-RUN mkdir lab-0
+RUN mkdir -p lab-0/src
 
 ENTRYPOINT ["/bin/bash", "-i"]
