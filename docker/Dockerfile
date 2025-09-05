@@ -43,7 +43,7 @@ ENV DEBIAN_FRONTEND=dialog
 
 # Setup conda env
 RUN groupadd -g 1002 robot
-RUN useradd -ms "/bin/bash -i" --uid 1002 -g 1002 robot
+RUN useradd -ms /bin/bash --uid 1002 -g 1002 robot
 USER robot
 WORKDIR /home/robot
 RUN mkdir Desktop
