@@ -42,6 +42,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo '$TZ' | sudo tee -a /
 ENV DEBIAN_FRONTEND=dialog
 
 # Setup conda env
+RUN groupadd -g 1002 robot
 RUN useradd -ms "/bin/bash -i" --uid 1002 -g 1002 robot
 USER robot
 WORKDIR /home/robot
